@@ -1,0 +1,132 @@
+.education {
+  padding: 60px 20px;
+  background: #000000; /* pure black background */
+  color: #e0e0e0; /* light gray text for general readability */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  color: #00ffc8; /* bright cyan for section title */
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #00ffc8; /* changed to cyan */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 2px;
+}
+
+.timeline-item {
+  padding: 20px 30px;
+  position: relative;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+.timeline-item .content {
+  background: rgba(0, 255, 200, 0.1); /* subtle cyan tinted transparent background */
+  padding: 20px 25px;
+  border-radius: 12px;
+  border: 1.5px solid #00ffc8;
+  box-shadow: 0 6px 20px rgba(0, 255, 200, 0.25);
+  text-align: left;
+  color: #c1fff8; /* lighter cyan for content text */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+}
+
+.timeline-item .content:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 255, 200, 0.5);
+}
+
+.timeline-item .year {
+  font-weight: 700;
+  color: #00ffc8;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  letter-spacing: 1.5px;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.timeline-item.right {
+  left: 55%;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  width: 24px;
+  height: 24px;
+  background-color: #00ffc8;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 8px #00ffc8;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-item.left::before {
+  right: -12px;
+}
+
+.timeline-item.right::before {
+  left: -12px;
+}
+
+/* ================== RESPONSIVE ================== */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+    margin-bottom: 35px;
+  }
+
+  .timeline-item.right {
+    left: 0%;
+  }
+
+  .timeline-item.left::before,
+  .timeline-item.right::before {
+    left: 20px;
+  }
+
+  .timeline-item.left {
+    text-align: left;
+    padding-right: 25px;
+  }
+  
+  .timeline-item .content {
+    font-size: 1rem;
+  }
+}

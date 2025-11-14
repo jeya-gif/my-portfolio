@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.skills-section {
+  padding: 3rem 1rem;
+  background: #000; /* Full black background */
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.skills-title {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+  color: #00f7ff;
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* ✅ Smaller min size */
+  gap: 1.2rem; /* ✅ Reduced space between cards */
+  justify-items: center;
+}
+
+.skill-card {
+  perspective: 1000px;
+  width: 180px; /* ✅ Smaller width */
+  height: 240px; /* ✅ Smaller height */
+  transition: transform 0.3s ease;
+  position: relative;
+  z-index: 0; /* default */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+.skill-card:hover {
+  transform: scale(1.1); /* ✅ Pop-up effect */
+  z-index: 10; /* ✅ Bring to top */
+}
+
+.skill-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.card-front {
+  background: linear-gradient(145deg, #111, #1b1b1b);
+  color: #00f7ff;
+  border: 1px solid #00f7ff33;
+}
+
+.card-front .skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.card-back {
+  background: linear-gradient(145deg, #1b1b1b, #111);
+  color: #ddd;
+  transform: rotateY(180deg);
+  font-size: 0.85rem;
+  line-height: 1.3;
+  border: 1px solid #00f7ff33;
+}
+
+.skill-card:hover .card-front,
+.skill-card:hover .card-back {
+  box-shadow: 0 0 20px #00f7ff55; /* ✅ Glow on hover */
+}

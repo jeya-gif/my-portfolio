@@ -1,0 +1,41 @@
+.home {
+  width: 100%;              /* Full viewport width */
+  min-height: 100vh;         /* Full viewport height */
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  /* Remove side padding that was reducing width */
+  padding: 0;
+  box-sizing: border-box;
+
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+}
+
+.home-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-typewriter {
+  font-size: 2rem;
+  color: #00e5ff;
+  margin-bottom: 20px;
+  min-height: 40px; /* Reserve space so layout doesn’t jump */
+}
+
+.home-description {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 800px; /* Allow more space for wider pages */
+}

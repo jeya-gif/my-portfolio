@@ -1,0 +1,94 @@
+/* App.css */
+
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full-screen black background */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+/* Root app container */
+.app {
+  width: 100vw; /* Force full viewport width */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Smooth animations */
+section {
+  width: 100vw; /* Full viewport width for every section */
+  padding: 80px 20px;
+  transition: all 0.4s ease;
+}
+
+/* Links and buttons hover */
+a, button {
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  transform: scale(1.05);
+}
+
+/* Headings animation */
+h1, h2, h3 {
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Fade In Up Keyframe */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Footer */
+footer {
+  width: 100vw; /* Full width footer */
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+  max-width: 100%; /* Prevent section from exceeding screen width */
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
