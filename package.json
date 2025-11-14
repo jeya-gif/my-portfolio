@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
 
-  "homepage": "https://jeya-gif.github.io/my_portfolio/",
+  "homepage": "https://jeya-gif.github.io/my_portfolio/"
 
   "scripts": {
     "dev": "vite",
